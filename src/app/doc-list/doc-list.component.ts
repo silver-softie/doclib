@@ -1,23 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
+
+import { DocumentService } from '../shared/document.service';
+
 @Component({
   selector: 'app-doc-list',
   templateUrl: './doc-list.component.html',
-  styleUrls: ['./doc-list.component.css']
+  styleUrls: ['./doc-list.component.css'],
+  providers: [DocumentService]
 })
 export class DocListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private documentService: DocumentService) { }
 
   ngOnInit(): void {
   }
 
-  documents = [
-    { id: 1, reference: 'abc', title: 'First doc', author: 'Brad', content: 'This is first document\'s content' },
-    { id: 2, reference: 'def', title: 'Second doc', author: 'Dawn',  content: 'This is second document\'s content' },
-    { id: 3, reference: 'ghi', title: 'Third doc', author: 'Isla', content: 'This is third document\'s content' }
-  ]
-
-  displayedColumns: string[] = ['id', 'reference', 'title', 'author'];
 
 }

@@ -7,7 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './header/search/search.component';
 import { DocListComponent } from './doc-list/doc-list.component';
-import { UserManagementComponent } from './header/user-management/user-management.component';
+import { DocItemComponent } from './doc-list/doc-item/doc-item.component';
+import { UserManagementComponent } from './user-management/user-management.component';
+import { UserListComponent } from './user-management/user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { UserManagementComponent } from './header/user-management/user-managemen
     HeaderComponent,
     SearchComponent,
     DocListComponent,
-    UserManagementComponent
+    DocItemComponent,
+    UserManagementComponent,
+    UserListComponent
 
   ],
   imports: [
