@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DocLibDoc } from '../models/doclibdoc';
 
 
 import { DocumentService } from '../shared/document.service';
@@ -10,6 +11,7 @@ import { DocumentService } from '../shared/document.service';
   providers: [DocumentService]
 })
 export class DocListComponent implements OnInit {
+  documents: DocLibDoc[];
 
   constructor(private documentService: DocumentService) { }
 

@@ -1,1 +1,31 @@
-<p>user-list works!</p>
+<div class="row">
+  <div class="container">
+    <h2>Active Users</h2>
+    <div class="list-group">
+      <div *ngFor="let user of users">
+        <app-user-item
+          *ngIf="user.status === 'active'"
+          [user]=user>
+        </app-user-item>
+      </div>
+    </div>
+    <div *ngIf="activeCount() === 0">
+      None
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="container">
+    <h2>Inactive Users</h2>
+    <div class="list-group">
+      <div *ngFor="let user of users">
+        <app-user-item *ngIf="user.status === 'inactive'" [user]=user>
+        </app-user-item>
+      </div>
+    </div>
+    <div *ngIf="inactiveCount() === 0">
+      None
+    </div>
+  </div>
+</div>

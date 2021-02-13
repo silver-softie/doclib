@@ -10,6 +10,7 @@ import { DocListComponent } from './doc-list/doc-list.component';
 import { DocItemComponent } from './doc-list/doc-item/doc-item.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { UserListComponent } from './user-management/user-list/user-list.component';
+import { UserItemComponent } from './user-management/user-list/user-item/user-item.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,8 @@ import { UserListComponent } from './user-management/user-list/user-list.compone
     DocListComponent,
     DocItemComponent,
     UserManagementComponent,
-    UserListComponent
-
+    UserListComponent,
+    UserItemComponent
   ],
   imports: [
     BrowserModule,
