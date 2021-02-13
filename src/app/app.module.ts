@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatTableModule } from '@angular/material/table';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,6 +14,11 @@ import { UserManagementComponent } from './user-management/user-management.compo
 import { UserListComponent } from './user-management/user-list/user-list.component';
 import { UserItemComponent } from './user-management/user-list/user-item/user-item.component';
 import { NewUserComponent } from './user-management/new-user/new-user.component';
+
+const appRoutes: Routes = [
+  { path: 'documents', component: DocListComponent },
+  { path: 'users', component: UserManagementComponent }
+];
 
 @NgModule({
   declarations: [
@@ -30,7 +36,8 @@ import { NewUserComponent } from './user-management/new-user/new-user.component'
     BrowserModule,
     BrowserAnimationsModule,
     MatTableModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
