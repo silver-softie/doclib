@@ -6,8 +6,8 @@ import { User } from '../models/user';
 })
 export class UserService {
   users: User[] = [
-    new User('Brad', 'brad.moffat', 'brad@moffat.me.uk', 'active'),
-    new User('Stuart', 'stuart.cluley', 'stuart.cluley@gmail.com', 'inactive')
+    new User(0, 'Brad', 'brad.moffat', 'brad@moffat.me.uk', 'active'),
+    new User(1, 'Stuart', 'stuart.cluley', 'stuart.cluley@gmail.com', 'active')
   ];
 
   constructor() { }
