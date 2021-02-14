@@ -16,7 +16,7 @@ import { UserItemComponent } from './user-management/user-list/user-item/user-it
 import { NewUserComponent } from './user-management/new-user/new-user.component';
 
 const appRoutes: Routes = [
-  { path: 'documents', component: DocListComponent },
+  { path: '', component: DocListComponent },
   { path: 'users', component: UserManagementComponent }
 ];
 
